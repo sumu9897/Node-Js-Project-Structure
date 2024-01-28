@@ -1,10 +1,10 @@
 const express =require('express')
 const router= require('./src/routes/api')
-const  app=new express()
+const  obj=new express()
 
 
-app.use('/',router)
+obj.use('/',router)
 
 
 
-module.exports=app;
+module.exports=obj;
