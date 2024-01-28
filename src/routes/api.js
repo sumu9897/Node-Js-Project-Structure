@@ -12,3 +12,5 @@ router.put("/update",StudentController.UpdateStudent)
 
 router.delete("/delete",StudentController.DeleteStudent)
 
+module.exports=router
+
