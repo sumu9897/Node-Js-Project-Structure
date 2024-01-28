@@ -3,12 +3,12 @@ const StudentController =require("../controllers/StudentController")
 
 const router=express.Router();
 
-router.get()
+router.get("/read",StudentController.ReadStudent)
 
 
 router.post("/create",StudentController.CreateStudent)
 
-router.put()
+router.put("/update",StudentController.UpdateStudent)
 
-router.delete()
+router.delete("/delete",StudentController.DeleteStudent)
 
