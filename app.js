@@ -7,6 +7,7 @@ const  obj=new express()
 
 obj.use('/',router)
 obj.use(cors)
+obj.use(helmet())
 
 
 
