@@ -11,7 +11,7 @@ router.post("/create",AuthMiddleware,StudentController.CreateStudent)
 
 router.put("/update",StudentController.UpdateStudent)
 
-router.delete("/delete",StudentController.DeleteStudent)
+router.delete("/delete",AuthMiddleware,StudentController.DeleteStudent)
 
 module.exports=router
 
