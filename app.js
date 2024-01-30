@@ -8,6 +8,7 @@ const  obj=new express()
 
 obj.use('/',router)
 obj.use(cors)
+//Global Middileware
 obj.use(helmet())
 obj.use(hpp)
 
