@@ -13,5 +13,7 @@ router.put("/update",StudentController.UpdateStudent)
 
 router.delete("/delete",AuthMiddleware,StudentController.DeleteStudent)
 
+router.put("/upload",StudentController.UploadStudentPhoto)
+
 module.exports=router
 

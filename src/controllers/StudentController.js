@@ -17,3 +17,10 @@ exports.ReadStudent=(req,res)=>{
 
     res.end("I am Read Student")
 }
+
+//Upload Student Photo
+
+exports.UploadStudentPhoto=(req,res)=>{
+
+    res.end("Upload Student Photo")
+}
