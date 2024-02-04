@@ -1,5 +1,6 @@
 const multer=require('multer');
 const path = require("path");
+// const {options} = require("axios");
 const storage=multer.diskStorage({
     destination:function (req,file,cb){
         cb(null,path.resolve(__dirname,'..','files'))
@@ -10,13 +11,27 @@ const storage=multer.diskStorage({
 
 })
 
+const upload=multer({storage:storage})
+
 //Upload Student Photo
 
-exports.UploadStudentPhoto=(req,res)=>{
-   const MoveFile = upload.single('studentImage');
-   MoveFile()
+exports.UploadStPhoto=async (req,res)=>{
 
-    res.end("Upload Image")
+    const moveFile=upload.single('stImg');
+
+    await new Promise((resolve, reject)=>{
+        moveFile(req,{},(err)=>{
+            if(err){
+                reject(err)
+            }
+            else{
+                resolve()
+            }
+        })
+    });
+
+
+    return res.end("Uploaded")
 
 
 }
