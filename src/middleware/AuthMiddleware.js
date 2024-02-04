@@ -4,5 +4,7 @@ module.exports=(req,res,next)=>{
     // next()
     // return res.end("Stop Here")
 
-    return next()
+    return res.end("STOP")
+
+    //return next()
 }

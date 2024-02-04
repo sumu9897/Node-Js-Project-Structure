@@ -10,11 +10,13 @@ const storage=multer.diskStorage({
 
 })
 
-
-
 //Upload Student Photo
 
 exports.UploadStudentPhoto=(req,res)=>{
+   const MoveFile = upload.single('studentImage');
+   MoveFile()
+
+    res.end("Upload Image")
 
 
 }
